@@ -35,7 +35,7 @@
 }
 
 .address {
-  font-size: normal;
+  font-style: normal;
 }
 
 .header__address {
@@ -46,26 +46,89 @@
 .cover {
   position: relative;
   background-image: url('../images/cover.jpg');
+  background-repeat: no-repeat;
+  color: white;
+  z-index: 1;
 }
 
-.overlay {}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
 
-.cover__title {}
+.cover__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 100px;
+  padding: 165px 50px 135px 50px;
+  line-height: 104px;
+  letter-spacing: 29px;
+  z-index: 2;
+}
 
 .aligned-text {
-  color: white;
+  align-self: start;
 }
 
-.aligned-text_center {}
+.aligned-text_center {
+  align-self: center;
+  line-height: 1.5;
+}
 
-.aligned-text_right {}
+.aligned-text_right {
+  align-self: flex-end;
+}
 
-.letter-spacing-extended {}
+.letter-spacing-extended {
+  letter-spacing: 55px;
+}
 
-.no-letter-spacing {}
+.no-letter-spacing {
+  letter-spacing: 0;
+}
 
-.cover__description {}
+.cover__description {
+  display: flex;
+  justify-content: space-evenly;
+}
 
-.cover__description-text {}
+.cover__description-text {
+  word-spacing: 21px;
+  font-size: 22px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
 
-.bet-button {}
+.bet-button {
+  text-transform: uppercase;
+  width: 256px;
+  height: 51px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid white;
+  align-self: center;
+  position: relative;
+  bottom: 6px;
+  left: 14px;
+}
+
+.lots {
+  padding: 179px 24px 0px 24px;
+}
+
+.lots__heading {
+  font-size: 40px;
+}
+
+.lots__cart-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
