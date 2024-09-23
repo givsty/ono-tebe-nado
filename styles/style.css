@@ -197,10 +197,7 @@
 }
 
 .about {
-  margin-left: 24px;
-  padding-bottom: 180px;
-  margin-top: 215px;
-  padding-right: 24px;
+  padding: 215px 24px 180px 24px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
