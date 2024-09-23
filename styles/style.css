@@ -138,21 +138,27 @@
   padding-top: 24px;
 }
 
+.lots__cart-list-item {
+  display: flex;
+}
+
 .card {
+  position: relative;
   width: 334px;
-  height: 563px;
+  height: 100%;
   padding: 51px 40px 48px 40px;
-  font-size: 1px;
   font-size: 15px;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .card-link {
   text-decoration: none;
 }
+
 .card__title {
   font-size: 22px;
   text-transform: uppercase;
@@ -191,13 +197,13 @@
 }
 
 .about {
-  margin-left: 24px auto;
+  margin-left: 24px;
   padding-bottom: 180px;
   margin-top: 215px;
-  margin-left: 24px;
+  padding-right: 24px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: 
+  grid-template-areas:
     'logo text'
     '2 text';
 }
@@ -214,6 +220,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .about__logo-image {
   width: 148px;
   height: 114px;
@@ -238,35 +245,43 @@
   align-self: end;
 }
 
-.footer{
+.footer {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 88px;
+  font-size: 18px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
-.address {
 
-}
-.footer__menu {
-
-}
 .footer__menu-list {
   list-style: none;
 }
+
 .footer__menu-list-item {
-
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
+
 .footer__menu-link {
-
+  text-decoration: none;
 }
+
 .footer__menu-link_active {
-
+  text-decoration: underline;
 }
+
 .footer__social-list {
   display: flex;
   list-style: none;
-  gap: 58px;
+  gap: 51px;
 }
+
 .footer__social-link {
+  text-decoration: none;
 }
+
 .footer__social-icon {
   width: 48px;
   height: 48px;
