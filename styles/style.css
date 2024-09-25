@@ -36,6 +36,7 @@
 
 .address {
   font-style: normal;
+  line-height: 25px;
 }
 
 .header__address {
@@ -46,12 +47,12 @@
 .cover {
   position: relative;
   background-image: url('../images/cover.jpg');
-  background-size: 125%;
-  background-position: 39% 28%;
-  background-repeat: no-repeat;
-  color: white;
+  background-size: cover;
+  background-repeat: no-repeat; /*Исправлено значение изображения*/
+  background-position: center;
+  color: white; 
   z-index: 1;
-  height: 757px;
+  min-height: 757px;
 }
 
 .overlay {
@@ -60,7 +61,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6); /*Исправлена прозрачность фона*/
   z-index: -1;
 }
 
@@ -68,8 +69,8 @@
   display: flex;
   flex-direction: column;
   font-size: 100px;
-  padding: 165px 50px 135px 50px;
-  line-height: 104px;
+  padding: 170px 52px 134px 52px;
+  line-height: 99px;
   letter-spacing: 29px;
   z-index: 2;
 }
@@ -88,7 +89,7 @@
 }
 
 .letter-spacing-extended {
-  letter-spacing: 55px;
+  letter-spacing: 60px;
 }
 
 .no-letter-spacing {
@@ -97,13 +98,15 @@
 
 .cover__description {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-left: 78px;
+  padding-right: 50px;
 }
 
 .cover__description-text {
-  word-spacing: 21px;
+  word-spacing: 19px;
   font-size: 22px;
-  line-height: 35px;
+  line-height: 50px;
   text-transform: uppercase;
 }
 
@@ -114,21 +117,20 @@
   background: transparent;
   color: white;
   cursor: pointer;
-  font-size: 20px;
-  border: 1px solid white;
+  font-size: 22px;
+  border: 1px solid currentColor; /*Исправлено на currentColor*/
   align-self: center;
-  position: relative;
-  bottom: 6px;
-  left: 14px;
+  font-family: Raleway, sans-serif; /*Убраны оступы через left и bottom*/
 }
 
 .lots {
-  padding: 179px 24px 0px 24px;
+  padding: 178px 24px 0px 24px;
 }
 
 .lots__heading {
   font-size: 40px;
   padding-left: 40px;
+  padding-bottom: 1px;
 }
 
 .lots__cart-list {
@@ -136,6 +138,9 @@
   justify-content: space-between;
   list-style: none;
   padding-top: 24px;
+  flex-wrap: wrap;
+  gap: 17px;
+  padding-bottom: 29px
 }
 
 .card {
@@ -167,33 +172,32 @@
   line-height: 24px;
 }
 
-.card_type_film {
-  background-image: url('../images/card-lot-01.jpg');
+.card_type_film, 
+.card_type_book , 
+.card_type_picture {
   background-size: 161%;
   background-position: center;
+}
+
+.card_type_film {
+  background-image: url('../images/card-lot-01.jpg');
 }
 
 .card_type_book {
   background-image: url('../images/card-lot-02.jpg');
-  background-size: 161%;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url('../images/card-lot-03.jpg');
-  background-size: 161%;
-  background-position: center;
 }
 
 .lots__look-more-link {
-  position: relative;
-  top: 28px;
-  left: 37px;
+  margin-left: 39px; /*Изменены значения на Marigin/padding!!!!!!!!!!!!!!!!*/
   font-size: 20px;
 }
 
 .about {
-  padding: 215px 24px 180px 24px;
+  padding: 182px 24px 180px 14px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
@@ -224,31 +228,41 @@
   justify-content: space-around;
   flex-direction: column;
   grid-area: text;
+  padding-left: 15px;
+  padding-top: 4px;
 }
 
 .about__title {
   padding-top: 97px;
-  font-size: 41px;
+  font-size: 40px;
   text-transform: uppercase;
-  padding-bottom: 97px;
+  padding-bottom: 100px;
 }
 
 .about__text {
-  font-size: 21px;
+  font-size: 20px;
   align-self: end;
+  letter-spacing: 0.1px;
+}
+
+.about-fix-padding-text {
+  padding-top: 5px;
 }
 
 .footer {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 88px;
+  padding: 0px 50px 88px 50px;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
 }
 
+.footer__menu {
+  padding-left: 39px;
+}
+
 .footer__menu-list {
   list-style: none;
+  justify-self: center;
 }
 
 .footer__menu-list-item {
@@ -268,7 +282,7 @@
 .footer__social-list {
   display: flex;
   list-style: none;
-  gap: 51px;
+  gap: 48px;
 }
 
 .footer__social-link {
@@ -279,3 +293,4 @@
   width: 48px;
   height: 48px;
 }
+
