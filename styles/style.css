@@ -66,6 +66,7 @@
 }
 
 .cover__title {
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   font-size: 100px;
@@ -267,11 +268,11 @@
 }
 
 .footer__menu-link {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .footer__menu-link_active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer__social-list {
